@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GALLERY PAGE</title>
+        <style>
+            body{
+                background-color:azure;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: italic;
+                font-weight: bolder;
+            }
+            .footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>GALLERY</h1>
+        <p>Here are the images of the crochet items in a slider form.</p>
+        <section>
+            <img class="myslider" src="bag.webp" style="height: 200px;">
+            <img class="myslider" src="blanket.webp" style="height: 200px;">
+            <img class="myslider" src="top.webp" style="height: 200px;">
+            <img class="myslider" src="fingerless gloves.jpg" style="height: 200px;">
+            <img class="myslider" src="mitten.webp" style="height: 200px;">
+            <img class="myslider" src="toy.webp" style="height: 200px;">
+            <img class="myslider" src="skirt.webp" style="height: 200px;">
+            <img class="myslider" src="keychain.webp" style="height: 200px;">
+            <img class="myslider" src="beanie.webp" style="height: 200px;">
+            <img class="myslider" src="holder.webp" style="height: 200px;">
+            <img class="myslider" src="sock.webp" style="height: 200px;">
+            <img class="myslider" src="headband.webp" style="height: 200px;">
+            <img class="myslider" src="headband1.webp" style="height: 200px;">
+            <img class="myslider" src="heart.webp" style="height: 200px;">
+            <img class="myslider" src="flower.webp" style="height: 200px;">
+            <img class="myslider" src="pillow.webp" style="height: 200px;">
+            <img class="myslider" src="scarf.webp" style="height: 200px;">
+            <p>This is not all, we have a lot more. So if you need any crochet items, we are here for you.</p>
+        </section>
+         <script>
+            var myIndex=0;
+            carousel();
+
+            function carousel(){
+                var i;
+                var x=document.getElementsByClassName("myslider");
+                for(i=0;i<x.length;i++){
+                    x[i].style.display="none";
+                }
+                myIndex++;
+                if(myIndex>x.length){
+                    myIndex=1
+                }
+                x[myIndex-1].style.display="block";
+                setTimeout(carousel,2000);
+            }
+        </script>
+        <div class="footer">
+            <p>@copy all rights and reserved by Atiyyatullah</p>
+        </div>
+    </body>
+</html>
